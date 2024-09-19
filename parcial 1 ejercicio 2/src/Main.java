@@ -51,7 +51,7 @@ public class Main {
 
                     switch (opcionMenuLibro) {
                         case 0:
-                            String cliente = verificarCliente("Ingrese cliente");
+                            String cliente = verificarCliente("Ingrese clientee");
                             libroGenerico.prestarLibro(cliente);
                             break;
                         case 1:
