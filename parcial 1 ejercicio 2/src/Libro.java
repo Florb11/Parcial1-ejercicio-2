@@ -43,6 +43,10 @@ public class Libro {
     public String getAutor() {
         return autor;
     }
+
+    public double getPrecioAlquiler() {
+        return precioAlquiler;
+    }
     public int getNumeroPaginas() {
         return numeroPaginas;
     }
