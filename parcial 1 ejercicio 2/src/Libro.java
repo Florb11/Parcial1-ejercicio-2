@@ -35,6 +35,7 @@ public class Libro {
             this.fechaPrestamo = LocalDate.now();
             this.cliente = cliente;
     }
+
  //get y set
     public String getTitulo() {
         return titulo;

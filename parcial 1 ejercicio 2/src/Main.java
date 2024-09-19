@@ -8,8 +8,9 @@ public class Main {
 
         int opcionesMenuUno;
 
-        Libro libro1 = new Libro("It", "Stephen King", 1500.0, 1138, false, null, "",19);
-        Libro libro2 = new Libro("The Shining", "Stephen King", 12000.0,  447 , false, null, "",1);
+        Libro libro1 = new Libro("It", "Stephen King", 1500.0, 1138, false, null, "", 19);
+        Libro libro2 = new Libro("The Shining", "Stephen King", 12000.0, 447, false, null, "", 1);
+        //Libro libro3 = new Libro("librito", "autorsito", 2, 1, false, null, "", 1);
 
 
         do {
@@ -50,7 +51,8 @@ public class Main {
 
                     switch (opcionMenuLibro) {
                         case 0:
-                            libroGenerico.prestarLibro(JOptionPane.showInputDialog("Ingrese cliente"));
+                            String cliente = verificarCliente("Ingrese cliente");
+                            libroGenerico.prestarLibro(cliente);
                             break;
                         case 1:
                             libroGenerico.devolverLibro();
@@ -69,4 +71,13 @@ public class Main {
             }
         } while (opcionesMenuUno != 2);
     }
+
+    public static String verificarCliente(String mensaje) {
+        String palabra = "";
+        while (palabra.equals("")) {
+            palabra = JOptionPane.showInputDialog(mensaje);
+        }
+        return palabra;
+    }
 }
+
